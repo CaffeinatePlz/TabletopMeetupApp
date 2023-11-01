@@ -13,14 +13,30 @@ import Profile from "./screens/Profile"
 
 const Tabs = createBottomTabNavigator();
 const RootStack = createNativeStackNavigator();
-const Stack = createNativeStackNavigator();
+const EventStack = createNativeStackNavigator();
+const ProfileStack = createNativeStackNavigator();
+
 
 export default function App() {
+  const EventTab = () => (
+    <EventStack.Navigator> 
+      <EventStack.Screen name = "BrowseEvent" component={Browse} ></EventStack.Screen>
+      <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
+    </EventStack.Navigator>
+  )
+
+  const ProfileTabs = () => (
+    <ProfileStack.Navigator> 
+      <ProfileStack.Screen name = "Profile" component={Profile} ></ProfileStack.Screen>
+      <ProfileStack.Screen name = "Settings" component={Settings} ></ProfileStack.Screen>
+    </ProfileStack.Navigator>
+  )
+
   const BottomTabs = () => (
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen
-        name="Browse"
-        component={Browse}
+        name="Events"
+        component={EventTab}
         options={{
           tabBarIcon: ({ focused, size }) => (
             <Ionicons 
@@ -44,7 +60,7 @@ export default function App() {
       />
       <Tabs.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileTabs}
         options={{
           tabBarIcon: ({ focused, size }) => (
             <FontAwesome 
@@ -66,19 +82,9 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <RootStack.Screen
-          name="Create"
-          component={Create}
-          options={{ headerBackTitle: "Back" }}
-        />
-        <RootStack.Screen
           name="Events"
           component={Events}
           options={{ }}
-        />
-        <RootStack.Screen
-          name="Settings"
-          component={Settings}
-          options={{}}
         />
       </RootStack.Navigator>
     </NavigationContainer>
