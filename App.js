@@ -7,8 +7,11 @@ import Settings from "./screens/Settings";
 import Browse from "./screens/Browse";
 import Events from "./screens/Events";
 import Create from "./screens/Create";
-import Notifications from "./screens/Notifications"
-import Profile from "./screens/Profile"
+import Notifications from "./screens/Notifications";
+import Profile from "./screens/Profile";
+import Login from "./screens/Login";
+import Signup from "./screens/Signup";
+import Welcome from "./screens/Welcome";
 
 
 const Tabs = createBottomTabNavigator();
@@ -27,8 +30,11 @@ export default function App() {
 
   const ProfileTabs = () => (
     <ProfileStack.Navigator> 
+      <ProfileStack.Screen name = "Welcome" component={Welcome} ></ProfileStack.Screen>
       <ProfileStack.Screen name = "Profile" component={Profile} ></ProfileStack.Screen>
       <ProfileStack.Screen name = "Settings" component={Settings} ></ProfileStack.Screen>
+      <ProfileStack.Screen name = "Login" component={Login} ></ProfileStack.Screen>
+      <ProfileStack.Screen name = "Signup" component={Signup} ></ProfileStack.Screen>
     </ProfileStack.Navigator>
   )
 
