@@ -20,7 +20,7 @@ const ProfileStack = createNativeStackNavigator();
 export default function App() {
   const EventTab = () => (
     <EventStack.Navigator> 
-      <EventStack.Screen name = "BrowseEvent" component={Browse} ></EventStack.Screen>
+      <EventStack.Screen name = "Home" component={Browse} ></EventStack.Screen>
       <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
     </EventStack.Navigator>
   )
