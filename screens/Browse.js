@@ -66,7 +66,7 @@ export default function Browse({ route, navigation  }) {
 							</View>
 						</View>
 					</View>
-					<View style={{alignItems: "center", justifyContent: 'center', width: '85%', height: 30, borderWidth: 1, borderRadius: 5, marginBottom: 20}}>
+					<View style={{alignItems: "center", justifyContent: 'center', width: '85%', height: 40, borderWidth: 1, borderRadius: 5, marginBottom: 20}}>
 						<Text style={{ textAlign: 'center' }}>View Details</Text>
 					</View>
 				</View>
