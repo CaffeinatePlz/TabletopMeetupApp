@@ -17,17 +17,13 @@ export default function Browse({ route, navigation  }) {
 					/>
 					<Ionicons name="search-outline" size={24} color="black" style={{ position: 'absolute', right: 10 , top: 12}}/>
 				</View>
-				<View style={{ paddingBottom: 20, alignItems: "center",  flexDirection: 'row', justifyContent: 'center'}}>
+				<View style={{ paddingBottom: 20, alignItems: "center",  flexDirection: 'row', justifyContent: 'center', gap: 10}}>
 					<View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', borderWidth: 2, padding: 8, paddingLeft: 20, paddingRight: 20, borderRadius: 10, borderColor: '#d1d9e8' }}>
 						<Text style={{textAlign: 'center', textAlignVertical: 'center',}}>Game</Text>
 						<Ionicons name="chevron-down-outline" size={18} color="black" />
 					</View>
-					<View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center',  borderWidth: 2, marginLeft: 10, marginRight: 10, padding: 8, paddingLeft: 20, paddingRight: 20, borderRadius: 10, minWidth: 90, borderColor: '#d1d9e8'}}>
-						<Text style={{textAlign: 'center', textAlignVertical: 'center',}}>Commitment</Text>
-						<Ionicons name="chevron-down-outline" size={18} color="black" />
-					</View>
 					<View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', borderWidth: 2, padding: 8, paddingLeft: 20, paddingRight: 20, borderRadius: 10, borderColor: '#d1d9e8' }}>
-						<Text style={{textAlign: 'center', textAlignVertical: 'center',}}>Vibe</Text>
+						<Text style={{textAlign: 'center', textAlignVertical: 'center',}}>Skill Level</Text>
 						<Ionicons name="chevron-down-outline" size={18} color="black" />
 					</View>
 				</View>

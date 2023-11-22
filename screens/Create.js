@@ -7,4 +7,4 @@ export default function Create({ route, navigation  }) {
         <Text accessibilityHint="Create">Create</Text>
       </View>
     );
-  }
+}
