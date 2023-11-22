@@ -16,7 +16,7 @@ export default function Login({ route, navigation  }) {
             <Text style = {{fontSize: 48, fontWeight: 'bold', marginBottom: 50}} accessibilityHint="Login">Login</Text>
             <Text style = {{fontSize: 20, marginBottom: 5}} accessibilityHint="Username">Username</Text>
             <TextInput
-                style = {{ marginBotton: 50, fontSize: 24, height: 50, width: screenWidth - 70, borderRadius: 10, textAlignVertical: 'center', padding: 8, paddingRight: 45, backgroundColor: '#e6e8ec' }}
+                style = {{ fontSize: 24, height: 50, width: screenWidth - 70, borderRadius: 10, textAlignVertical: 'center', padding: 8, paddingRight: 45, backgroundColor: '#e6e8ec' }}
                 placeholder="Username"
                 placeholderTextColor="#003f5c"
                 //onChangeText={text => setState({email : text})}
@@ -24,7 +24,7 @@ export default function Login({ route, navigation  }) {
             <Text style = {{fontSize: 20, marginTop: 20, marginBottom: 5}} accessibilityHint="Password">Password</Text>
 
             <TextInput
-                style = {{ marginBotton: 50, fontSize: 24, height: 50, width: screenWidth - 70, borderRadius: 10, textAlignVertical: 'center', padding: 8, paddingRight: 45, backgroundColor: '#e6e8ec' }}
+                style = {{ fontSize: 24, height: 50, width: screenWidth - 70, borderRadius: 10, textAlignVertical: 'center', padding: 8, paddingRight: 45, backgroundColor: '#e6e8ec' }}
                 placeholder="Password"
                 secureTextEntry
                 placeholderTextColor="#003f5c"
@@ -35,7 +35,7 @@ export default function Login({ route, navigation  }) {
                     text={"Login"}
                     textColor={"white"}
                     buttonColor={"grey"}
-                    onPress={() => checkCredentials(state.username, state.password) ? navigation.navigate("Events") : alert("wrong login")}
+                    onPress={() => checkCredentials(state.username, state.password) ? navigation.navigate("Browse") : alert("wrong login")}
                 />
             </View>
 

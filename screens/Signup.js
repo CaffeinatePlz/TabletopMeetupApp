@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, View, Dimensions, TextInput, TouchableOpacity} from "react-native";
+import { Text, View, Dimensions, TextInput, TouchableOpacity, ScrollView} from "react-native";
 import { RoundedButton } from "../components/RoundedButton";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -15,7 +15,8 @@ export default function Signup({ route, navigation  }) {
     const screenHeight = Dimensions.get('window').height;
 
     return ( 
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "start", marginTop: 50}}>
+        <ScrollView>
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "start", marginTop: 50}}>
         <Text style = {{fontSize: 48, fontWeight: 'bold', marginBottom: 50}} accessibilityHint="Sign Up">Sign Up</Text>
         <Text style = {{fontSize: 20, marginBottom: 5}} accessibilityHint="Email Address">Email Address</Text>
         
@@ -65,6 +66,7 @@ export default function Signup({ route, navigation  }) {
             <Text style = {{fontSize: 20, marginBottom: 5}} accessibilityHint="Sign Up">Already have an account? Log in!</Text>
         </TouchableOpacity>
     </View>
+    </ScrollView>
     )
 }
 
