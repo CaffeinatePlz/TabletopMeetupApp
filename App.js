@@ -15,15 +15,23 @@ const Tabs = createBottomTabNavigator();
 const RootStack = createNativeStackNavigator();
 const EventStack = createNativeStackNavigator();
 const ProfileStack = createNativeStackNavigator();
+const NotificationStack = createNativeStackNavigator();
+
 
 
 export default function App() {
   const EventTab = () => (
     <EventStack.Navigator> 
-      <EventStack.Screen name = "BrowseEvent" component={Browse} ></EventStack.Screen>
+      <EventStack.Screen name = "Home" component={Browse} ></EventStack.Screen>
       <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
+      <EventStack.Screen name = "Event" component={Events} ></EventStack.Screen>
     </EventStack.Navigator>
   )
+
+  const NotificationTab = () =>
+    <NotificationStack.Navigator>
+      <NotificationStack.Screen name = "Notifications" component={Notifications}></NotificationStack.Screen>
+    </NotificationStack.Navigator>
 
   const ProfileTabs = () => (
     <ProfileStack.Navigator> 
@@ -35,7 +43,7 @@ export default function App() {
   const BottomTabs = () => (
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen
-        name="Events"
+        name="Home"
         component={EventTab}
         options={{
           tabBarIcon: ({ focused, size }) => (
@@ -48,7 +56,7 @@ export default function App() {
       />
       <Tabs.Screen
         name="Notifications"
-        component={Notifications}
+        component={NotificationTab}
         options={{
           tabBarIcon: ({ focused, size }) => (
             <Ionicons 
