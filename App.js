@@ -24,7 +24,7 @@ const NotificationStack = createNativeStackNavigator();
 
 export default function App() {
   const EventTab = () => (
-    <EventStack.Navigator> 
+    <EventStack.Navigator>
       <EventStack.Screen name = "Browse" component={Browse} ></EventStack.Screen>
       <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
       <EventStack.Screen name = "Event" component={Events} ></EventStack.Screen>
@@ -37,7 +37,7 @@ export default function App() {
     </NotificationStack.Navigator>
 
   const ProfileTabs = () => (
-    <ProfileStack.Navigator> 
+    <ProfileStack.Navigator>
       <ProfileStack.Screen name = "Welcome" component={Welcome} ></ProfileStack.Screen>
       {/* <ProfileStack.Screen name = "Profile" component={Profile} ></ProfileStack.Screen> */}
       <ProfileStack.Screen name = "Settings" component={Settings} ></ProfileStack.Screen>
@@ -50,12 +50,13 @@ export default function App() {
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="Home"
-        component={EventTab}
+        // component={EventTab}
+        component={Events} // TODO
         options={{
           tabBarIcon: ({ focused, size }) => (
-            <Ionicons 
-              name={focused? "home" : "home-outline"} 
-              size={size} 
+            <Ionicons
+              name={focused? "home" : "home-outline"}
+              size={size}
             />
           ),
         }}
@@ -65,9 +66,9 @@ export default function App() {
         component={NotificationTab}
         options={{
           tabBarIcon: ({ focused, size }) => (
-            <Ionicons 
-              name={focused? "notifications" : "notifications-outline"} 
-              size={size} 
+            <Ionicons
+              name={focused? "notifications" : "notifications-outline"}
+              size={size}
             />
           ),
         }}
@@ -77,9 +78,9 @@ export default function App() {
         component={ProfileTabs}
         options={{
           tabBarIcon: ({ focused, size }) => (
-            <FontAwesome 
-              name={focused? "user" : "user-o"} 
-              size={size} 
+            <FontAwesome
+              name={focused? "user" : "user-o"}
+              size={size}
             />
           ),
         }}
