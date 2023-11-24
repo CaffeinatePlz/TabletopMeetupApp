@@ -1,19 +1,15 @@
 import React, { useEffect } from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
-import { ScrollView } from "react-native-web";
+import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 
 import TagPill from "../components/TagPill";
-
-// import { }
-
+import RsvpButton from "../components/EventActionButtons/RsvpButton";
 
 export default function Events({ route, navigation  }) {
 
   const eventTitle = "OrangeCat's Super Chill D&D Game"
 
-
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={{rowGap: 5}} style={styles.container}>
 
       {/* Event thumbnail */}
       <Image style={styles.eventThumbnail}/>
@@ -26,11 +22,12 @@ export default function Events({ route, navigation  }) {
         <TagPill tagName={"TTRPG"}/>
         <TagPill tagName={"One-Off"}/>
         <TagPill tagName={"Casual"}/>
-
-        <View>
-
-        </View>
       </View>
+
+      {/* Action button */}
+      <RsvpButton/>
+
+
 
       <Text accessibilityHint="Events">Events</Text>
     </ScrollView>
@@ -40,11 +37,11 @@ export default function Events({ route, navigation  }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     borderWidth: 2,
-
+    borderColor: 'red',
     paddingHorizontal: 35,
-    paddingVertical: 20,
-
+    paddingVertical: 35,
     // alignItems: "center",
     // justifyContent: "center"
   },
