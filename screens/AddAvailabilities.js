@@ -12,6 +12,10 @@ import { orangeCat } from "../assets";
 
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
 import RoundedContainer from "../components/RoundedContainer";
+import Checkbox from "../components/Checkbox";
+import TimeDateOption from "../components/TimeDateOption/TimeDateOption";
+import OptionsContainer from "../components/TimeDateOption/OptionsContainer";
+import RoundedButtonC from "../components/EventActionButtons/RoundedButtonC";
 
 export default function AddAvailabilities({route, navigation}) {
 
@@ -32,24 +36,20 @@ export default function AddAvailabilities({route, navigation}) {
   const vibeTag = "Casual";
 
   return (
-    <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.screenContainer}>
+    <ScrollView contentContainerStyle={{rowGap: 25}} style={[styles.screenContainer]}>
 
       <Text>Add Availabilities</Text>
 
       <Text>Please help the host schedule the game by selecting all the times you can play.</Text>
 
-      <RoundedContainer style={styles.optionsContainer}>
-
-
-
-
-      </RoundedContainer>
-
+      <OptionsContainer/>
 
       {/* Action button */}
       <RsvpButton/>
 
-
+      {/* <RoundedButtonC>
+        <Text>awef</Text>
+      </RoundedButtonC> */}
 
     </ScrollView>
   );
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   },
   optionsContainer: {
     borderWidth: 2,
-    borderColor: 'red',
+    // borderColor: COLOURS.lightBlueBorder,
+    backgroundColor: COLOURS.lightBlue,
   },
 });

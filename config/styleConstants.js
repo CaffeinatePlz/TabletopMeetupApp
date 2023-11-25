@@ -14,6 +14,7 @@ export const GAPS = {
 export const COLOURS = {
   darkBlue: '#2d3648',
   mediumBlue: '#717d96',
+  lightBlueBorder: '#cbd2e0',
   lightBlue: '#e2e7f0',
   appBackground: '#f2f2f2',
   tagPillsBackground: '#ddd',
@@ -21,5 +22,6 @@ export const COLOURS = {
 }
 
 export const RADIUS = {
-
+  roundedContainerLarge: 10,
+  roundedContainerMedium: 6,
 }

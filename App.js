@@ -52,8 +52,8 @@ export default function App() {
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="Home"
-        // component={RSVP}
-        component={EventTab} // TODO
+        component={AddAvailabilities}
+        // component={EventTab} // TODO
         options={{
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
