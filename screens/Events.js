@@ -11,6 +11,9 @@ import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
 export default function Events({ route, navigation  }) {
 
   const eventTitle = "OrangeCat's Super Chill D&D Game"
+  const gameTypeTag = "TTRPG";
+  const frequencyTag = "One-Off";
+  const vibeTag = "Casual";
 
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.container}>
@@ -22,7 +25,11 @@ export default function Events({ route, navigation  }) {
       <Text style={styles.title}>{eventTitle}</Text>
 
       {/* Tags list */}
-      <TagsContainer/>
+      <TagsContainer
+        gameType={gameTypeTag}
+        frequency={frequencyTag}
+        vibe={vibeTag}
+      />
 
       {/* Action button */}
       <RsvpButton/>
