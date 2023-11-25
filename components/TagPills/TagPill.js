@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 
+import { TEXT_SIZE } from "../../config/styleConstants";
+
 export default function TagPill({tagName}) {
   return (
     <View style={styles.pill}>
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ddd',  // Changed to greyscale after hi-fi test feedback
   },
   tagName: {
-    fontSize: 15,
+    fontSize: TEXT_SIZE.tagPillsText,
     color: '#454545',  // maintain text contrast on greyscale background
     fontWeight: 600,
   }
