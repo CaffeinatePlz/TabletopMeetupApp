@@ -4,6 +4,9 @@ import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 import RsvpButton from "../components/EventActionButtons/RsvpButton";
 import AttendeesList from "../components/AttendeesList/AttendeesList";
 import TagsContainer from "../components/TagPills/TagsContainer";
+import EventDetails from "../components/EventDetails/EventDetails";
+import Description from "../components/EventDetails/Description";
+import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
 
 export default function Events({ route, navigation  }) {
 
@@ -29,6 +32,18 @@ export default function Events({ route, navigation  }) {
 
       {/* "Attendees interested in" section removed after hi-fi tests */}
 
+      {/* Divider */}
+      <View style={styles.divider}/>
+
+      {/* Event Details */}
+      <EventDetails/>
+
+      {/* Description */}
+      <Description/>
+
+      {/* Documents & Assets */}
+      <DocumentsAssets/>
+
     </ScrollView>
   );
 }
@@ -45,7 +60,8 @@ const styles = StyleSheet.create({
   eventThumbnail: {
     height: 250,
     width: '100%',
-    borderWidth: 2,
+    borderWidth: 3,
+    borderColor: '#717d96',
     borderRadius: 10,
     backgroundColor: '#e2e7f0',
   },
@@ -55,4 +71,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     // lineHeight: '150%',
   },
+  divider: {
+    borderWidth: 1.5,
+    borderColor: '#bbb',
+    // borderColor: '#717d96',
+  }
 });
