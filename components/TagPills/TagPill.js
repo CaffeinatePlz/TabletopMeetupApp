@@ -11,16 +11,15 @@ export default function TagPill({tagName}) {
 
 const styles = StyleSheet.create({
   pill: {
-    borderRadius: 4,
-    paddingHorizontal: 10,
+    borderRadius: 5,
+    paddingHorizontal: 12,
     paddingTop: 4,
-    paddingBottom: 6,
-    backgroundColor: '#ccc',  // We decided after hi-fi test feedback
-                              // to make these greyscale instead of colourful
+    paddingBottom: 5,
+    backgroundColor: '#ddd',  // Changed to greyscale after hi-fi test feedback
   },
   tagName: {
     fontSize: 15,
-    // color: '#666'
-    // fontWeight: 'bold',
+    color: '#454545',  // maintain text contrast on greyscale background
+    fontWeight: 600,
   }
 });
