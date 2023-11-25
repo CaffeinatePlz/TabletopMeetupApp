@@ -1,13 +1,12 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
-import { TEXT_SIZE } from "../../config/styleConstants";
-
+import { TEXT_SIZE, GAPS } from "../../config/styleConstants";
 
 export default function EventDetails() {
   return (
     <View style={styles.detailsContainer}>
-        <Text style={styles.heading}>Event Details</Text>
+      <Text style={styles.heading}>Event Details</Text>
 
     </View>
   )
@@ -15,10 +14,10 @@ export default function EventDetails() {
 
 const styles = StyleSheet.create({
   detailsContainer: {
-
+    rowGap: GAPS.eventDetailsHeadingBody,
   },
   heading: {
-    fontSize: TEXT_SIZE.eventPageHeadings,
-    fontWeight: 'bold'
+    fontSize: TEXT_SIZE.eventPageHeading,
+    fontWeight: 'bold',
   },
 });

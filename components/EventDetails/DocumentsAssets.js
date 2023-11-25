@@ -1,24 +1,27 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
-import { TEXT_SIZE } from "../../config/styleConstants";
+import { TEXT_SIZE, GAPS } from "../../config/styleConstants";
 
 
 export default function DocumentsAssets() {
   return (
-    <View style={styles.detailsContainer}>
-        <Text style={styles.heading}>Documents & Assets</Text>
+    <View style={styles.assetsContainer}>
+      <Text style={styles.heading}>Documents & Assets</Text>
+      <View style={styles.thumbnailsContainer}>
+
+      </View>
 
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  detailsContainer: {
-
+  assetsContainer: {
+    rowGap: GAPS.eventDetailsHeadingBody,
   },
   heading: {
-    fontSize: TEXT_SIZE.eventPageHeadings,
-    fontWeight: 'bold'
+    fontSize: TEXT_SIZE.eventPageHeading,
+    fontWeight: 'bold',
   },
 });

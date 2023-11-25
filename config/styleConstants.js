@@ -4,7 +4,7 @@ export const TEXT_SIZE = {
     bodyTextLarge: 20,      // for accessibility
     tagPillsText: 15,
     eventPageTitle: 40,
-    eventPageHeadings: 28,
+    eventPageHeading: 28,
 }
 
 export const GAPS = {

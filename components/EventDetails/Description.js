@@ -3,11 +3,9 @@ import { Text, StyleSheet, View } from "react-native";
 
 import { TEXT_SIZE, GAPS } from "../../config/styleConstants";
 
-export default function Description({desc}) {
-  const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
-
+export default function Description({description}) {
   return (
-    <View style={styles.detailsContainer}>
+    <View style={styles.descriptionContainer}>
       <Text style={styles.heading}>Description</Text>
       <Text style={styles.bodyText}>{description}</Text>
     </View>
@@ -15,12 +13,12 @@ export default function Description({desc}) {
 }
 
 const styles = StyleSheet.create({
-  detailsContainer: {
+  descriptionContainer: {
     rowGap: GAPS.eventDetailsHeadingBody,
   },
   heading: {
-    fontSize: TEXT_SIZE.eventPageHeadings,
-    fontWeight: 'bold'
+    fontSize: TEXT_SIZE.eventPageHeading,
+    fontWeight: 'bold',
   },
   bodyText: {
     fontSize: TEXT_SIZE.bodyTextRegular,

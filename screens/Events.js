@@ -8,10 +8,12 @@ import EventDetails from "../components/EventDetails/EventDetails";
 import Description from "../components/EventDetails/Description";
 import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
+import Test from "../components/Test/Test";
 
 export default function Events({ route, navigation  }) {
 
   const eventTitle = "OrangeCat's Super Chill D&D Game"
+  const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
   const gameTypeTag = "TTRPG";
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
@@ -47,7 +49,7 @@ export default function Events({ route, navigation  }) {
       <EventDetails/>
 
       {/* Description */}
-      <Description/>
+      <Description description={description}/>
 
       {/* Documents & Assets */}
       <DocumentsAssets/>
