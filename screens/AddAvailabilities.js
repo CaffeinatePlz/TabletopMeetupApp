@@ -11,8 +11,9 @@ import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
 import { orangeCat } from "../assets";
 
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
+import RoundedContainer from "../components/RoundedContainer";
 
-export default function Events({route, navigation}) {
+export default function AddAvailabilities({route, navigation}) {
 
   // TODO:
   // - make more action buttons
@@ -33,43 +34,22 @@ export default function Events({route, navigation}) {
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.screenContainer}>
 
-      {/* Event thumbnail */}
-      <Image source={orangeCat} style={styles.eventThumbnail}/>
+      <Text>Add Availabilities</Text>
 
-      {/* Event title */}
-      <Text style={styles.title}>{eventTitle}</Text>
+      <Text>Please help the host schedule the game by selecting all the times you can play.</Text>
 
-      {/* Tags list */}
-      <TagsContainer
-        gameType={gameTypeTag}
-        frequency={frequencyTag}
-        vibe={vibeTag}
-      />
+      <RoundedContainer style={styles.optionsContainer}>
+
+
+
+
+      </RoundedContainer>
+
 
       {/* Action button */}
-      <RsvpButton navigation={navigation}/>
+      <RsvpButton/>
 
-      {/* Attendees list */}
-      <AttendeesList/>
 
-      {/* "Attendees interested in" section removed after hi-fi tests */}
-
-      {/* Divider */}
-      {/* <View style={styles.divider}/> */}
-
-      {/* Event Details */}
-      <EventDetails
-        dateTime={dateTime}
-        location={location}
-        host={host}
-        entryFee={entryFee}
-      />
-
-      {/* Description */}
-      <Description description={description}/>
-
-      {/* Documents & Assets */}
-      <DocumentsAssets/>
 
     </ScrollView>
   );
@@ -84,23 +64,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     paddingVertical: 35,
   },
-  eventThumbnail: {
-    height: 250,
-    width: '100%',
-    borderWidth: 3,
-    borderColor: COLOURS.darkBlue,
-    borderRadius: 10,
-    backgroundColor: COLOURS.lightBlue,
+  optionsContainer: {
+    borderWidth: 2,
+    borderColor: 'red',
   },
-  title: {
-    fontSize: TEXT_SIZE.eventPageTitle,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    // lineHeight: '150%',
-  },
-  divider: {
-    borderWidth: 1.5,
-    // borderColor: '#bbb',
-    borderColor: COLOURS.darkBlue,
-  }
 });

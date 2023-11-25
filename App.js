@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Settings from "./screens/Settings";
 import Browse from "./screens/Browse";
 import Events from "./screens/Events";
+import AddAvailabilities from "./screens/AddAvailabilities";
 import Create from "./screens/Create";
 import Notifications from "./screens/Notifications";
 import Profile from "./screens/Profile";
@@ -28,6 +29,7 @@ export default function App() {
       <EventStack.Screen name = "Browse" component={Browse} ></EventStack.Screen>
       <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
       <EventStack.Screen name = "Event" component={Events} ></EventStack.Screen>
+      <EventStack.Screen name = "Add Availabilities" component={AddAvailabilities} ></EventStack.Screen>
     </EventStack.Navigator>
   )
 
@@ -50,8 +52,8 @@ export default function App() {
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="Home"
-        // component={EventTab}
-        component={Events} // TODO
+        // component={RSVP}
+        component={EventTab} // TODO
         options={{
           tabBarIcon: ({ focused, size }) => (
             <Ionicons

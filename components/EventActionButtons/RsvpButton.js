@@ -1,10 +1,11 @@
 import React from "react";
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
+
 import { COLOURS, TEXT_SIZE } from "../../config/styleConstants";
 
-export default function RsvpButton() {
+export default function RsvpButton({route, navigation}) {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Add Availabilities")}>
       <Text style={styles.buttonText}>RSVP to Event +</Text>
     </TouchableOpacity>
   )
