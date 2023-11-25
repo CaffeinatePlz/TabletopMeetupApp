@@ -12,7 +12,12 @@ export const GAPS = {
 }
 
 export const COLOURS = {
-
+    darkBlue: '#2d3648',
+    mediumBlue: '#717d96',
+    lightBlue: '#e2e7f0',
+    appBackground: '#f2f2f2',
+    tagPillsBackground: '#ddd',
+    tagPillsText: '#454545',
 }
 
 export const RADIUS = {

@@ -7,6 +7,7 @@ import TagsContainer from "../components/TagPills/TagsContainer";
 import EventDetails from "../components/EventDetails/EventDetails";
 import Description from "../components/EventDetails/Description";
 import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
+import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
 
 export default function Events({ route, navigation  }) {
 
@@ -68,12 +69,12 @@ const styles = StyleSheet.create({
     height: 250,
     width: '100%',
     borderWidth: 3,
-    borderColor: '#717d96',
+    borderColor: COLOURS.mediumBlue,
     borderRadius: 10,
-    backgroundColor: '#e2e7f0',
+    backgroundColor: COLOURS.lightBlue,
   },
   title: {
-    fontSize: 40,
+    fontSize: TEXT_SIZE.eventPageTitle,
     fontWeight: 'bold',
     textAlign: 'center',
     // lineHeight: '150%',

@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Image, View } from "react-native";
+import { COLOURS } from "../../config/styleConstants";
 
 export default function AttendeePicture() {
   return (
@@ -19,8 +20,8 @@ const styles = StyleSheet.create({
     width: 43,    // for better visibility of photo
     borderRadius: 40,
     borderWidth: 3,
-    borderColor: '#2d3648',
-    backgroundColor: '#e2e7f0',
+    borderColor: COLOURS.darkBlue,
+    backgroundColor: COLOURS.lightBlue,
   },
   overlap: {
     width: 1,

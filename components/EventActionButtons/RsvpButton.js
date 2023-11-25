@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { COLOURS, TEXT_SIZE } from "../../config/styleConstants";
 
 export default function RsvpButton() {
   return (
@@ -16,11 +17,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 22,
     paddingTop: 12,
     paddingBottom: 13,
-    backgroundColor: '#2d3648',
+    backgroundColor: COLOURS.darkBlue,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: TEXT_SIZE.bodyTextRegular,
     fontWeight: 'bold',
-    color: 'white',
+    color: COLOURS.appBackground,
   },
 });

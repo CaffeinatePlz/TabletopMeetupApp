@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import AttendeePicture from "./AttendeePicture";
+import { TEXT_SIZE } from "../../config/styleConstants";
 
 export default function AttendeesList() {
   return (
@@ -22,7 +23,7 @@ export default function AttendeesList() {
 const styles = StyleSheet.create({
   listContainer: {
     // borderWidth: 2,
-    rowGap: 8,
+    rowGap: 10,
   },
   picturesContainer: {
     alignSelf: 'center',
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
   },
   attendeesNumber: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: TEXT_SIZE.bodyTextSmall,
     // color: '#555'
     // color: '#2d3648'
   }
