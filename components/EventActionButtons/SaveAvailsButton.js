@@ -5,13 +5,13 @@ import RoundedButtonC from "./RoundedButtonC";
 
 import { COLOURS, TEXT_SIZE } from "../../config/styleConstants";
 
-export default function RsvpButton({route, navigation}) {
+export default function SaveAvailsButton({navigation}) {
   return (
     <RoundedButtonC
       style={styles.button}
-      onPress={() => navigation.navigate("Add Availabilities")}
+      onPress={() => navigation.navigate("Events")}
     >
-      <Text style={styles.buttonText}>RSVP to Event ＋</Text>
+      <Text style={styles.buttonText}>Save & RSVP  ➜</Text>
     </RoundedButtonC>
   )
 }

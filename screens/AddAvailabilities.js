@@ -16,6 +16,7 @@ import Checkbox from "../components/Checkbox";
 import TimeDateOption from "../components/TimeDateOption/TimeDateOption";
 import OptionsContainer from "../components/TimeDateOption/OptionsContainer";
 import RoundedButtonC from "../components/EventActionButtons/RoundedButtonC";
+import SaveAvailsButton from "../components/EventActionButtons/SaveAvailsButton";
 
 export default function AddAvailabilities({route, navigation}) {
 
@@ -44,12 +45,9 @@ export default function AddAvailabilities({route, navigation}) {
 
       <OptionsContainer/>
 
-      {/* Action button */}
-      <RsvpButton/>
+      <RsvpButton navigation={navigation}/>
 
-      {/* <RoundedButtonC>
-        <Text>awef</Text>
-      </RoundedButtonC> */}
+      <SaveAvailsButton/>
 
     </ScrollView>
   );

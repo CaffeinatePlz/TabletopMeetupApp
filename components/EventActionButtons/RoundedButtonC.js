@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 
-import { COLOURS, TEXT_SIZE } from "../../config/styleConstants";
+import { COLOURS } from "../../config/styleConstants";
 
-export default function RoundedButtonC({route, navigation, props}) {
+export default function RoundedButtonC(props) {
   return (
     <TouchableOpacity style={styles.button}>
       {props.children}
@@ -19,10 +19,5 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 13,
     backgroundColor: COLOURS.darkBlue,
-  },
-  buttonText: {
-    fontSize: TEXT_SIZE.bodyTextRegular,
-    fontWeight: 'bold',
-    color: COLOURS.appBackground,
   },
 });
