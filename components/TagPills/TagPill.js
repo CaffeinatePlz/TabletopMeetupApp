@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLOURS.tagPillsBackground,  // Changed to greyscale after hi-fi test feedback
   },
   tagName: {
-    fontSize: TEXT_SIZE.tagPillsText,
-    color: COLOURS.tagPillsText,  // maintain text contrast on greyscale background
+    fontSize: TEXT_SIZE.labelText,
+    color: COLOURS.labelText,  // maintain text contrast on greyscale background
     fontWeight: 600,
   }
 });
