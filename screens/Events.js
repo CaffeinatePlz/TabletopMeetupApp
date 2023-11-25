@@ -7,13 +7,25 @@ import TagsContainer from "../components/TagPills/TagsContainer";
 import EventDetails from "../components/EventDetails/EventDetails";
 import Description from "../components/EventDetails/Description";
 import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
+
+import { orangeCat } from "../assets";
+
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
-import Test from "../components/Test/Test";
 
 export default function Events({ route, navigation  }) {
 
+  // TODO:
+  // - make more action buttons
+  // - make availabilities screens
+  // - make confirmation / joined screens
+  // - pull event details from async storage
+
   const eventTitle = "OrangeCat's Super Chill D&D Game"
   const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
+  const dateTime = "TBC";
+  const location = "UNSW Library";
+  const host = "OrangeCat";
+  const entryFee = "$5";
   const gameTypeTag = "TTRPG";
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
@@ -22,7 +34,7 @@ export default function Events({ route, navigation  }) {
     <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.container}>
 
       {/* Event thumbnail */}
-      <Image style={styles.eventThumbnail}/>
+      <Image source={orangeCat} style={styles.eventThumbnail}/>
 
       {/* Event title */}
       <Text style={styles.title}>{eventTitle}</Text>
@@ -43,10 +55,15 @@ export default function Events({ route, navigation  }) {
       {/* "Attendees interested in" section removed after hi-fi tests */}
 
       {/* Divider */}
-      <View style={styles.divider}/>
+      {/* <View style={styles.divider}/> */}
 
       {/* Event Details */}
-      <EventDetails/>
+      <EventDetails
+        dateTime={dateTime}
+        location={location}
+        host={host}
+        entryFee={entryFee}
+      />
 
       {/* Description */}
       <Description description={description}/>
@@ -71,7 +88,7 @@ const styles = StyleSheet.create({
     height: 250,
     width: '100%',
     borderWidth: 3,
-    borderColor: COLOURS.mediumBlue,
+    borderColor: COLOURS.darkBlue,
     borderRadius: 10,
     backgroundColor: COLOURS.lightBlue,
   },
@@ -83,7 +100,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     borderWidth: 1.5,
-    borderColor: '#bbb',
-    // borderColor: '#717d96',
+    // borderColor: '#bbb',
+    borderColor: COLOURS.darkBlue,
   }
 });
