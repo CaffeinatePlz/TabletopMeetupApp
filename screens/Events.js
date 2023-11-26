@@ -59,9 +59,6 @@ export default function Events({route, navigation}) {
 
       {/* "Attendees interested in" section removed after hi-fi tests */}
 
-      {/* Divider */}
-      {/* <View style={styles.divider}/> */}
-
       {/* Event Details */}
       <EventDetails
         dateTime={dateTime}
@@ -101,9 +98,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     // lineHeight: '150%',
   },
-  divider: {
-    borderWidth: 1.5,
-    // borderColor: '#bbb',
-    borderColor: COLOURS.darkBlue,
-  }
 });

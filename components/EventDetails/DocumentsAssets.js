@@ -13,12 +13,6 @@ export default function DocumentsAssets() {
         <AssetsThumbnail fileName={"Rulebook.pdf"}/>
         <AssetsThumbnail fileName={"Setting.pdf"}/>
         <AssetsThumbnail fileName={"CharSheet.pdf"}/>
-        <AssetsThumbnail fileName={"Long File Name.pdf"}/>
-        <AssetsThumbnail fileName={"Image.jpg"}/>
-        <AssetsThumbnail fileName={"Image.jpg"}/>
-        <AssetsThumbnail fileName={"Image.jpg"}/>
-        <AssetsThumbnail fileName={"Image.jpg"}/>
-        <AssetsThumbnail fileName={"Long File Name.pdf"}/>
       </View>
     </View>
   )
