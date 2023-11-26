@@ -14,7 +14,7 @@ export default function Description({description}) {
 
 const styles = StyleSheet.create({
   descriptionContainer: {
-    rowGap: GAPS.eventDetailsHeadingBody - 8,
+    rowGap: GAPS.eventDetailsHeadingBody,
   },
   heading: {
     fontSize: TEXT_SIZE.eventPageHeading,

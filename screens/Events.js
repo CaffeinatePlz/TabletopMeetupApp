@@ -33,7 +33,7 @@ export default function Events({route, navigation}) {
   const [availsAdded, setAvailsAdded] = useState(false);
 
   return (
-    <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.screenContainer}>
+    <ScrollView contentContainerStyle={{rowGap: 22}} style={styles.screenContainer}>
 
       {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
 
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   eventThumbnail: {
     height: 250,
     width: '100%',
-    borderWidth: 3,
+    borderWidth: 4,
     borderColor: COLOURS.darkBlue,
     borderRadius: 10,
     backgroundColor: COLOURS.lightBlue,

@@ -20,7 +20,7 @@ export default function DocumentsAssets() {
 
 const styles = StyleSheet.create({
   assetsContainer: {
-    rowGap: GAPS.eventDetailsHeadingBody,
+    rowGap: GAPS.eventDetailsHeadingBody + 8,
   },
   heading: {
     fontSize: TEXT_SIZE.eventPageHeading,

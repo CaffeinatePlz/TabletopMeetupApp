@@ -22,19 +22,15 @@ export default function AttendeesList() {
 
 const styles = StyleSheet.create({
   listContainer: {
-    // borderWidth: 2,
     rowGap: 10,
   },
   picturesContainer: {
     alignSelf: 'center',
-    // borderWidth: 2,
     flexDirection: 'row-reverse',
     paddingRight: 15,
   },
   attendeesNumber: {
     textAlign: 'center',
     fontSize: TEXT_SIZE.bodyTextSmall,
-    // color: '#555'
-    // color: '#2d3648'
   }
 });

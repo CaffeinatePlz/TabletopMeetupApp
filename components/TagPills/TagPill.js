@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingTop: 4,
     paddingBottom: 5,
-    backgroundColor: COLOURS.tagPillsBackground,  // Changed to greyscale after hi-fi test feedback
+    backgroundColor: COLOURS.lightBlueBorder,  // Changed to monochrome after hi-fi test feedback
   },
   tagName: {
     fontSize: TEXT_SIZE.labelText,
-    color: COLOURS.labelText,  // maintain text contrast on greyscale background
+    color: COLOURS.darkBlue,  // maintain text contrast on greyscale background
     fontWeight: 600,
   }
 });

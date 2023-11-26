@@ -9,7 +9,7 @@ export const TEXT_SIZE = {
 }
 
 export const GAPS = {
-  eventDetailsHeadingBody: 25,
+  eventDetailsHeadingBody: 18,
 }
 
 export const COLOURS = {
