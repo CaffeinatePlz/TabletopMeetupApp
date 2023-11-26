@@ -35,7 +35,7 @@ export default function Events({route, navigation}) {
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.screenContainer}>
 
-      <Text>{JSON.stringify(availsAdded)}</Text>
+      {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
 
 
       {/* Event thumbnail */}
@@ -84,8 +84,6 @@ const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
     flexDirection: 'column',
-    borderWidth: 2,
-    borderColor: 'red',
     paddingHorizontal: 35,
     paddingVertical: 35,
   },
