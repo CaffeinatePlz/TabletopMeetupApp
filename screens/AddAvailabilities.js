@@ -1,53 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 
-import RsvpButton from "../components/EventActionButtons/RsvpButton";
-import AttendeesList from "../components/AttendeesList/AttendeesList";
-import TagsContainer from "../components/TagPills/TagsContainer";
-import EventDetails from "../components/EventDetails/EventDetails";
-import Description from "../components/EventDetails/Description";
-import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
-
-import { orangeCat } from "../assets";
+import OptionsContainer from "../components/TimeDateOption/OptionsContainer";
+import SaveAvailsButton from "../components/EventActionButtons/SaveAvailsButton";
 
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
-import RoundedContainer from "../components/RoundedContainer";
-import Checkbox from "../components/Checkbox";
-import TimeDateOption from "../components/TimeDateOption/TimeDateOption";
-import OptionsContainer from "../components/TimeDateOption/OptionsContainer";
-import RoundedButtonC from "../components/EventActionButtons/RoundedButtonC";
-import SaveAvailsButton from "../components/EventActionButtons/SaveAvailsButton";
 
 export default function AddAvailabilities({route, navigation}) {
 
-  // TODO:
-  // - make more action buttons
-  // - make availabilities screens
-  // - make confirmation / joined screens
-  // - pull event details from async storage
-
-  const eventTitle = "OrangeCat's Super Chill D&D Game"
-  const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
-  const dateTime = "TBC";
-  const location = "UNSW Library";
-  const host = "OrangeCat";
-  const entryFee = "$5";
-  const gameTypeTag = "TTRPG";
-  const frequencyTag = "One-Off";
-  const vibeTag = "Casual";
+  const [availsAdded, setAvailsAdded] = useState(false);
 
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={[styles.screenContainer]}>
 
-      <Text>Add Availabilities</Text>
+      <Text>{JSON.stringify(availsAdded)}</Text>
 
-      <Text>Please help the host schedule the game by selecting all the times you can play.</Text>
+      <Text style={styles.screenTitle}>Add Availabilities</Text>
+
+      <Text style={styles.instructionsText}>Please help the host schedule the game by selecting all the times you can play.</Text>
 
       <OptionsContainer/>
 
-      <RsvpButton navigation={navigation}/>
-
-      <SaveAvailsButton/>
+      <SaveAvailsButton navigation={navigation} setAvailsAdded={() => setAvailsAdded(true)}/>
 
     </ScrollView>
   );
@@ -62,9 +36,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     paddingVertical: 35,
   },
-  optionsContainer: {
-    borderWidth: 2,
-    // borderColor: COLOURS.lightBlueBorder,
-    backgroundColor: COLOURS.lightBlue,
+  screenTitle: {
+    fontSize: TEXT_SIZE.screenTitle,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  instructionsText: {
+    fontSize: TEXT_SIZE.bodyTextRegular,
+    textAlign: 'center',
   },
 });

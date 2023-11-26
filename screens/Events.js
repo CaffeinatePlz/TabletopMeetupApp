@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 
 import RsvpButton from "../components/EventActionButtons/RsvpButton";
@@ -30,8 +30,13 @@ export default function Events({route, navigation}) {
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
 
+  const [availsAdded, setAvailsAdded] = useState(false);
+
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={styles.screenContainer}>
+
+      <Text>{JSON.stringify(availsAdded)}</Text>
+
 
       {/* Event thumbnail */}
       <Image source={orangeCat} style={styles.eventThumbnail}/>

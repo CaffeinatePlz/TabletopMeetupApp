@@ -23,7 +23,6 @@ export default function OptionsContainer({route, navigation}) {
 
 const styles = StyleSheet.create({
   optionsContainer: {
-    borderWidth: 2,
     borderRadius: RADIUS.roundedContainerLarge,
     borderColor: COLOURS.mediumBlue,
     backgroundColor: COLOURS.lightBlue,

@@ -7,11 +7,8 @@ import { COLOURS, TEXT_SIZE } from "../../config/styleConstants";
 
 export default function RsvpButton({route, navigation}) {
   return (
-    <RoundedButtonC
-      style={styles.button}
-      onPress={() => navigation.navigate("Add Availabilities")}
-    >
-      <Text style={styles.buttonText}>RSVP to Event ＋</Text>
+    <RoundedButtonC onPress={() => navigation.navigate("Add Availabilities")}>
+      <Text style={styles.buttonText}>RSVP to Event +</Text>
     </RoundedButtonC>
   )
 }

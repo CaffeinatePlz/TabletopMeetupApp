@@ -5,7 +5,7 @@ import { COLOURS } from "../../config/styleConstants";
 
 export default function RoundedButtonC(props) {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={props.onPress}>
       {props.children}
     </TouchableOpacity>
   )

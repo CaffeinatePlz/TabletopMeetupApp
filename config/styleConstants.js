@@ -3,6 +3,7 @@ export const TEXT_SIZE = {
   bodyTextRegular: 18,    // variable font size
   bodyTextLarge: 20,      // for accessibility
   labelText: 15,
+  screenTitle: 30,
   eventPageTitle: 40,
   eventPageHeading: 28,
 }
