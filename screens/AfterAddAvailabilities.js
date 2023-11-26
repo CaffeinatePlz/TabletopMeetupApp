@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
+import { Text, StyleSheet, Image, ScrollView } from "react-native";
 
-import RsvpButton from "../components/EventActionButtons/RsvpButton";
 import AttendeesList from "../components/AttendeesList/AttendeesList";
 import TagsContainer from "../components/TagPills/TagsContainer";
 import EventDetails from "../components/EventDetails/EventDetails";
@@ -13,13 +12,7 @@ import { orangeCat } from "../assets";
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
 import EditAvailabilitiesButton from "../components/EventActionButtons/EditAvailabilitiesButton";
 
-export default function Events({route, navigation}) {
-
-  // TODO:
-  // - make more action buttons
-  // - make availabilities screens
-  // - make confirmation / joined screens
-  // - pull event details from async storage
+export default function AfterAddAvailabilities({route, navigation}) {
 
   const eventTitle = "OrangeCat's Super Chill D&D Game"
   const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
@@ -31,13 +24,8 @@ export default function Events({route, navigation}) {
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
 
-  const [availsAdded, setAvailsAdded] = useState(false);
-
   return (
     <ScrollView contentContainerStyle={{rowGap: 22}} style={styles.screenContainer}>
-
-      {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
-
 
       {/* Event thumbnail */}
       <Image source={orangeCat} style={styles.eventThumbnail}/>

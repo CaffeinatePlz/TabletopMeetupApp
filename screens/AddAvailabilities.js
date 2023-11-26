@@ -32,14 +32,6 @@ export default function AddAvailabilities({route, navigation}) {
   return (
     <ScrollView contentContainerStyle={{rowGap: 25}} style={[styles.screenContainer]}>
 
-      {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
-
-      {/* <View>
-            { datesTimes.map((key, item, blob) => (
-                JSON.stringify(blob)
-            ))}
-          </View> */}
-
       <Text style={styles.screenTitle}>Add Availabilities</Text>
 
       <Text style={styles.instructionsText}>Please help the host schedule the game by selecting all the times you can play.</Text>

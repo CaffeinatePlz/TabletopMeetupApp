@@ -15,10 +15,10 @@ import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
 export default function Events({route, navigation}) {
 
   // TODO:
-  // - make more action buttons
-  // - make availabilities screens
-  // - make confirmation / joined screens
-  // - pull event details from async storage
+  // - make more action buttons DONE SOME
+  // - make availabilities screens DONE
+  // - make confirmation DONE / joined screens
+  // - pull event details from async storage WIP
 
   const eventTitle = "OrangeCat's Super Chill D&D Game"
   const description = "I’m running a chill Dungeons and Dragons (5th edition) one-shot to test out a new homebrew setting I wrote. Looking for 5 friendly players, some experience necessary. The story will be fun and light-hearted. Please bring your own dice and be respectful to everyone."
@@ -30,13 +30,8 @@ export default function Events({route, navigation}) {
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
 
-  const [availsAdded, setAvailsAdded] = useState(false);
-
   return (
     <ScrollView contentContainerStyle={{rowGap: 22}} style={styles.screenContainer}>
-
-      {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
-
 
       {/* Event thumbnail */}
       <Image source={orangeCat} style={styles.eventThumbnail}/>
