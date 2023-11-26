@@ -9,7 +9,7 @@ export default function SaveAvailsButton({navigation, setAvailsAdded}) {
 
   const saveAndRSVP = () => {
     setAvailsAdded();
-    navigation.navigate("Events");
+    navigation.navigate("After Add Availabilities");
   }
 
   return (

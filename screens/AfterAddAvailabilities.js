@@ -11,6 +11,7 @@ import DocumentsAssets from "../components/EventDetails/DocumentsAssets";
 import { orangeCat } from "../assets";
 
 import { COLOURS, TEXT_SIZE } from "../config/styleConstants";
+import EditAvailabilitiesButton from "../components/EventActionButtons/EditAvailabilitiesButton";
 
 export default function Events({route, navigation}) {
 
@@ -52,7 +53,11 @@ export default function Events({route, navigation}) {
       />
 
       {/* Action button */}
-      <RsvpButton navigation={navigation}/>
+      <EditAvailabilitiesButton navigation={navigation}/>
+
+      <Text style={styles.notificationText}>
+        You'll receive a notification when the host has finalised a date.
+      </Text>
 
       {/* Attendees list */}
       <AttendeesList/>
@@ -96,6 +101,11 @@ const styles = StyleSheet.create({
     fontSize: TEXT_SIZE.eventPageTitle,
     fontWeight: 'bold',
     textAlign: 'center',
-    // lineHeight: '150%',
   },
+  notificationText: {
+    fontSize: TEXT_SIZE.bodyTextSmall,
+    textAlign: 'center',
+    width: 300,
+    alignSelf: 'center'
+  }
 });

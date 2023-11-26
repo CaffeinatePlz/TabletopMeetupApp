@@ -7,6 +7,7 @@ import Settings from "./screens/Settings";
 import Browse from "./screens/Browse";
 import Events from "./screens/Events";
 import AddAvailabilities from "./screens/AddAvailabilities";
+import AfterAddAvailabilities from "./screens/AfterAddAvailabilities";
 import Create from "./screens/Create";
 import Notifications from "./screens/Notifications";
 import Profile from "./screens/Profile";
@@ -30,6 +31,7 @@ export default function App() {
       <EventStack.Screen name = "CreateEvent" component={Create} ></EventStack.Screen>
       <EventStack.Screen name = "Event" component={Events} ></EventStack.Screen>
       <EventStack.Screen name = "Add Availabilities" component={AddAvailabilities} ></EventStack.Screen>
+      <EventStack.Screen name = "After Add Availabilities" component={AfterAddAvailabilities} ></EventStack.Screen>
     </EventStack.Navigator>
   )
 
