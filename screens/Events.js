@@ -30,13 +30,8 @@ export default function Events({route, navigation}) {
   const frequencyTag = "One-Off";
   const vibeTag = "Casual";
 
-  const [availsAdded, setAvailsAdded] = useState(false);
-
   return (
     <ScrollView contentContainerStyle={{rowGap: 22}} style={styles.screenContainer}>
-
-      {/* <Text>{JSON.stringify(availsAdded)}</Text> */}
-
 
       {/* Event thumbnail */}
       <Image source={orangeCat} style={styles.eventThumbnail}/>
